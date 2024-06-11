@@ -136,7 +136,7 @@ step_start "Openresty"
   else
     os_fetch -O- https://openresty.org/package/pubkey.gpg | gpg --yes --dearmor -o /usr/share/keyrings/openresty.gpg &>$__OUTPUT
 
-    repository=http://openresty.org/package/$EPS_OS_DISTRO
+    repository=https://openresty.org/package/ubuntu/dists/jammy
     if [ "$EPS_OS_ARCH" != "amd64" ]; then
       repository=http://openresty.org/package/$EPS_OS_ARCH/$EPS_OS_DISTRO
     fi
